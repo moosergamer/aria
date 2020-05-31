@@ -40,7 +40,7 @@ except KeyError:
 aria2 = aria2p.API(
     aria2p.Client(
         host="http://localhost",
-        port=6870,
+        port=6800,
         secret="",
     )
 )
