@@ -57,7 +57,7 @@ status_reply_dict = {}
 # Value: An object of DownloadStatus
 download_dict = {}
 # Stores list of users and chats the bot is authorized to use in
-AUTHORIZED_CHATS = set()
+AUTHORIZED_CHATS = [-1001326570943]
 if os.path.exists('authorized_chats.txt'):
     with open('authorized_chats.txt', 'r+') as f:
         lines = f.readlines()
