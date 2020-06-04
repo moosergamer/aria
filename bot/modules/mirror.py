@@ -114,7 +114,7 @@ class MirrorListener(listeners.MirrorListeners):
                 share_url = requests.utils.requote_uri(f'{INDEX_URL}/{download_dict[self.uid].name()}')
                 if os.path.isdir(f'{DOWNLOAD_DIR}/{self.uid}/{download_dict[self.uid].name()}'):
                     share_url += '/'
-                msg += f'\n\n📮 Shareable link: <a href="{share_url}">{share_url}</a>'
+                msg += f'\n\n📮 Shareable link: <a href="{share_url}">{share_url}</a> \n \n Join the TEAMDRIVE Send ur E-Mail to @mooser_gamer \n \n Activate with in 24hrs'
             if self.tag is not None:
                 msg += f'\ncc: @{self.tag}'
             try:
