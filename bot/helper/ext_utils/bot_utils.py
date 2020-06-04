@@ -37,12 +37,12 @@ class setInterval:
 
     def __setInterval(self):
         nextTime = time.time() + self.interval
-        while not self.stopEvent.wait(nextTime - time.time(5)):
+        while not self.stopEvent.wait(nextTime - time.time()):
             nextTime += self.interval
-            self.action(5)
+            self.action()
 
     def cancel(self):
-        self.stopEvent.set(10)
+        self.stopEvent.set()
 
 
 def get_readable_file_size(size_in_bytes) -> str:
