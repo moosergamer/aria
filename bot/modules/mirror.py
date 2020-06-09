@@ -1,6 +1,5 @@
 import requests
 from telegram.ext import CommandHandler, run_async
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 
 from bot import Interval, INDEX_URL
 from bot import dispatcher, DOWNLOAD_DIR, DOWNLOAD_STATUS_UPDATE_INTERVAL, download_dict, download_dict_lock
@@ -129,8 +128,7 @@ class MirrorListener(listeners.MirrorListeners):
             self.clean()
         else:
             update_all_messages()
-      keyboard = [[InlineKeyboardButton('Drive Link', callback_data={link})],
-      keyboard = [[InlineKeyboardButton('Sharable Link', callback_data={share_url})]
+     
     def onUploadError(self, error):
         e_str = str(error.last_attempt.exception()).replace('<', '').replace('>', '')
         with download_dict_lock:
